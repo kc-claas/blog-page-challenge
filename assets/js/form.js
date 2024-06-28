@@ -4,7 +4,6 @@ const form = document.querySelector('form')
 const username = document.querySelector('#username')
 const title = document.querySelector('#title')
 const content = document.querySelector('#content')
-let submission
 // TODO: Create a function that handles the form submission. Grab the form data and store it in local storage, then redirect to the blog page using the `redirectPage` function. If the form is submitted with missing data, display an error message to the user.
 
 function formSubmit(event) {
@@ -14,9 +13,7 @@ if ((username.value === '') || (title.value === '') || (content.value === '')) {
   }
 else {
   readLocalStorage()
-  submission = {username: username.value, title: title.value, content: content.value}
-  blogposts.push(submission)
-  storeLocalStorage()
+  storeLocalStorage({username: username.value, title: title.value, content: content.value})
   redirectPage('./blog.html')
   }
 }

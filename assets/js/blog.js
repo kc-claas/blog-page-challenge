@@ -5,7 +5,7 @@ const back = document.querySelector('#back')
 
 // TODO: Create a function that builds an element and appends it to the DOM
 function buildList() {
-    for (i = 0; i < blogposts.length; i++) {
+    for (i = 0; i < readLocalStorage().length; i++) {
     post = readLocalStorage()[i]
     const arte = document.createElement('article')
     const h2e = document.createElement('h2')

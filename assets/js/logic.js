@@ -41,7 +41,8 @@ function readLocalStorage() {
 }
 
 // TODO: Create a function called `storeLocalStorage` that takes a given object and saves the new data to the existing blog data in local storage.
-function storeLocalStorage() {
+function storeLocalStorage(object) {
+    blogposts.push(object)
     localStorage.setItem('blogposts', JSON.stringify(blogposts))
 }
 
