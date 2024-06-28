@@ -13,9 +13,8 @@ if ((username.value === '') || (title.value === '') || (content.value === '')) {
   document.querySelector('#error').textContent= "Please complete the form."
   }
 else {
-  readLocalStorage()
   submission = {username: username.value, title: title.value, content: content.value}
-  blogposts.push(submission)
+  readLocalStorage().push(submission)
   storeLocalStorage()
   redirectPage('./blog.html')
   }
