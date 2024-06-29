@@ -12,7 +12,6 @@ if ((username.value === '') || (title.value === '') || (content.value === '')) {
   document.querySelector('#error').textContent= "Please complete the form."
   }
 else {
-  readLocalStorage()
   storeLocalStorage({username: username.value, title: title.value, content: content.value})
   redirectPage('./blog.html')
   }
