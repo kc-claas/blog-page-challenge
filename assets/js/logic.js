@@ -33,8 +33,8 @@ toggle.addEventListener('click', function() {
 
 // TODO: Create a function that reads from local storage and returns the data. If no data exists, return an empty array.
 function readLocalStorage() {
-    if (localStorage.getItem('blogposts') !== null){
-        blogposts = JSON.parse(localStorage.getItem('blogposts'))
+    if (localStorage.getItem('blogs') !== null){
+        blogposts = JSON.parse(localStorage.getItem('blogs'))
         }
     else  {blogposts = []}
     return blogposts
@@ -44,7 +44,7 @@ function readLocalStorage() {
 function storeLocalStorage(object) {
     let post = readLocalStorage()
     post.push(object)
-    localStorage.setItem('blogposts', JSON.stringify(post))
+    localStorage.setItem('blogs', JSON.stringify(post))
 }
 
 // ! Use the following function whenever you need to redirect to a different page
